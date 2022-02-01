@@ -61,11 +61,12 @@ __powerline() {
     readonly FG_VIOLET="\\[$(tput setaf 13)\\]"
     readonly FG_YELLOW="\\[$(tput setaf 3)\\]"
     readonly RESET="\\[$(tput sgr0)\\]"
+    readonly USERNAME="\h\[$(tput sgr0)\\]"
     readonly REVERSE="\\[$(tput rev)\\]"
 
     __git_info() {
         # no .git directory
-    	[ -d .git ] || return
+        [ -d .git ] || return
 
         local aheadN
         local behindN
@@ -107,7 +108,11 @@ __powerline() {
         fi
 
         PS1="$FG_COLOR1"
-        PS1+="$BG_COLOR5 \\w "
+        PS1+="$RESET${FG_COLOR9}$BG_COLOR2"
+        PS1+="$USERNAME"
+        PS1+="$RESET${FG_COLOR4}"
+        PS1+="$BG_COLOR4$RESET"
+        PS1+="$BG_COLOR5 \\W "
         PS1+="$RESET${FG_COLOR6}"
         PS1+="$(__git_info)"
         PS1+="$BG_EXIT$RESET"
