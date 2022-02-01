@@ -5,7 +5,7 @@ __powerline() {
     readonly GIT_BRANCH_CHANGED_SYMBOL='+'
     readonly GIT_NEED_PULL_SYMBOL='⇣'
     readonly GIT_NEED_PUSH_SYMBOL='⇡'
-    readonly PS_SYMBOL='🐧'
+    readonly PS_SYMBOL='⚡'
 
     # Solarized colorscheme
     readonly BG_BASE00="\\[$(tput setab 11)\\]"
