@@ -5,7 +5,8 @@ __powerline() {
     readonly GIT_BRANCH_CHANGED_SYMBOL='+'
     readonly GIT_NEED_PULL_SYMBOL='⇣'
     readonly GIT_NEED_PUSH_SYMBOL='⇡'
-    readonly PS_SYMBOL='⚡'
+    readonly PS_SYMBOL_TRUE='⚡'
+    readonly PS_SYMBOL_FALSE='🐍'
 
     # Solarized colorscheme
     readonly BG_BASE00="\\[$(tput setab 11)\\]"
@@ -98,9 +99,11 @@ __powerline() {
         if [ "$?" -eq 0 ]; then
             local BG_EXIT="$BG_GREEN"
             local FG_EXIT="$FG_GREEN"
+            local PS_SYMBOL="$PS_SYMBOL_TRUE"
         else
             local BG_EXIT="$BG_RED"
             local FG_EXIT="$FG_RED"
+            local PS_SYMBOL="$PS_SYMBOL_FALSE"
         fi
 
         PS1="$FG_COLOR1"
