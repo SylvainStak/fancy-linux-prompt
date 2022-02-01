@@ -3,7 +3,7 @@ This script is based on [fancy-linux-prompt](https://github.com/pjmp/fancy-linux
 
 ## Install:
 
-	wget -O ~/.fancy-prompt.sh https://raw.githubusercontent.com/pjmp/fancy-linux-prompt/master/fancy-prompt.sh
+	wget -O ~/.fancy-prompt.sh https://raw.githubusercontent.com/sylvainstak/fancy-linux-prompt/master/fancy-prompt.sh
 
 	source ~/.fancy-prompt.sh
 
